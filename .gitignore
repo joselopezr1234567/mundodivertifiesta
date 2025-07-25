@@ -1,0 +1,29 @@
+# Archivos de sistema de macOS
+.DS_Store
+
+# Archivos de XAMPP u otros entornos locales
+*.log
+*.sql
+*.sqlite
+*.env
+
+# Caché o archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Configuraciones de editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencias si usas Node o Composer
+node_modules/
+vendor/
+
+# Archivos de compilación (por si usas SASS, Webpack, etc.)
+dist/
+build/
+
