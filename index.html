@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundodivertifiesta</title>
+  <link rel="stylesheet" href="/mundodivertifiesta/assets/css/estilos.css" />
+</head>
+<body>
+  <!-- Fondo animado con globos -->
+  <div id="fondo-globos"></div>
+
+  <!-- Encabezado con logo y menú -->
+  <header>
+    <div class="logo">
+      <img src="assets/img/logo.jpeg" alt="Mundodivertifiesta" />
+      <h1>Mundodivertifiesta</h1>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="submenu">
+          <a href="#">Servicios</a>
+          <ul class="submenu-items">
+            <li><a href="juegos.html">Juegos Inflables</a></li>
+              
+              
+                
+            
+            <li><a href="casa.html">Casa de Cumpleaños</a></li>
+          </ul>
+        </li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="proposito.html">Propósito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="bienvenida">
+      <h2>¡Bienvenido a Mundodivertifiesta!</h2>
+      <p>Arriendo de juegos inflables y casas para cumpleaños.</p>
+   
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+  const imagenes = [
+    "/mundodivertifiesta/assets/img/globos.png"
+    
+  ];
+
+  const animacionGlobos = new GlobosAnimados("container", imagenes);
+  animacionGlobos.iniciar();
+  </script>
+
+
+  
+</body>
+</html>
