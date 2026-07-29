@@ -11,80 +11,47 @@ html {
 
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #f3f3ff;
+  background-color: #ffffff; /* Fondo Blanco */
   overflow-x: hidden;
-}
-
-body {
   margin: 0;
-  overflow: hidden;
-  
 }
-
-
-
-#fondo-globos {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-/* Globo animado */
-.globo {
-  position: absolute;
-  width: 40px;
-  height: 60px;
-  background: radial-gradient(circle, #ff6699, #cc3366);
-  border-radius: 50% 50% 50% 50%;
-  animation: subir 10s linear infinite;
-  opacity: 0;
-}
-
-@keyframes subir {
-  0% {
-    bottom: -60px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    bottom: 100%;
-    opacity: 0;
-  }
-}
-
-
 
 /* Header y menú */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffccff;
+  background-color: #ffffff; /* Banner Blanco */
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Sombra negra para efecto de profundidad */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
+header .logo {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.logo img {
-  height: 50px;
-  margin-right: 10px;
+header .logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #cc0066;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  
 }
 
 .menu a {
@@ -92,76 +59,253 @@ header {
   color: #333;
   font-weight: bold;
   padding: 8px;
+  transition: color 0.3s;
 }
 
 .menu a:hover {
   color: #cc0066;
 }
 
+/* Submenú */
 .submenu {
   position: relative;
-  display: block;
-  
-
-  
-}
-.submenu .submenu-items {
-  display: none;
-  position: absolute;
-  
 }
 
 .submenu-items {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffccff;
+  background: #ffffff;
   display: none;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 999;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px 0;
 }
 
 .submenu:hover .submenu-items {
   display: flex;
-  
 }
 
-/* Sección bienvenida */
-main {
-  padding: 50px;
+.submenu-items li a {
+  display: block;
+  padding: 10px 20px;
+}
+
+/* Sección Hero Central (Index) */
+.hero-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.bienvenida h2 {
+.hero-image-container {
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botones */
+.btn-principal, .btn-secundario {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-principal {
+  background-color: #cc0066;
+  color: white;
+}
+
+.btn-principal:hover {
+  background-color: #ff3399;
+  transform: scale(1.05);
+}
+
+.btn-secundario {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-secundario:hover {
+  background-color: #66bb6a;
+  transform: scale(1.05);
+}
+
+/* Servicios Grid */
+.seccion-servicios {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 36px;
+  color: #cc0066;
+  margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-servicio {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra un poco más marcada para el blanco */
+  transition: all 0.3s;
+  border: 1px solid #f0f0f0;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.tarjeta-servicio h3 {
+  color: #cc0066;
+  font-size: 20px;
+}
+
+/* Estilos para Carruseles de Juegos */
+.contenedor-carrusel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  gap: 50px;
+  max-width: 1100px;
+  padding: 20px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.flecha {
+  font-size: 30px;
+  cursor: pointer;
+  background: #f0f0f0;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.flecha:hover {
+  background: #e0e0e0;
+}
+
+#imagen-carrusel {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.descripcion {
+  flex: 1;
+  text-align: left;
+}
+
+.descripcion h2 {
   font-size: 32px;
   color: #cc0066;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.bienvenida p {
-  font-size: 20px;
-  color: #555;
-}
-
-/* Sección propósito */
-.proposito {
-  background: #fff8fb;
-  border-top: 4px dashed #ff99cc;
-  padding: 40px 20px;
-  margin-top: 30px;
-}
-
-.proposito h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #cc0066;
-}
-
-.proposito p {
+.descripcion p {
   font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #444;
+  color: #555;
   line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .contenedor-carrusel {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .descripcion {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu ul {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .hero-image {
+    max-width: 90%;
+  }
 }
