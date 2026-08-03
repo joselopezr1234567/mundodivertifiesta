@@ -26,6 +26,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   /* Sombra negra para efecto de profundidad */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -224,9 +225,10 @@ header h1 {
   margin: 50px auto;
   gap: 50px;
   max-width: 1100px;
-  padding: 20px;
+  padding: 15px 10px;
   background: white;
   border-radius: 30px;
+  width: 95%;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
@@ -289,16 +291,18 @@ header h1 {
   .contenedor-carrusel {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
-    padding: 15px;
+    width: 95%;
   }
 
   .carrusel {
     width: 100%;
+    justify-content: space-between;
   }
 
   #imagen-carrusel {
+    width: 100%;
     max-width: 100%;
+    height: auto;
   }
 
   .descripcion {
