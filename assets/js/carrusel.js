@@ -2,12 +2,60 @@
 const carruseles = {
   arco: [
     "assets/img/toboganarco.jpeg",
-    "assets/img/logo.jpeg"
+    "assets/img/toboganarco1.jpeg"
   ],
-  megaresbalin: [
-    "assets/img/logo.jpeg",
-    "assets/img/toboganarco.jpeg"
+  megaresfalin: [
+    "assets/img/megaresfalin.jpeg",
+    "assets/img/megaresfalin1.jpeg",
+    "assets/img/megaresfalin2.jpeg"
+
+    
   ],
+  hockey: [
+    "assets/img/hockey.jpeg",
+
+
+  ],
+  arcade: [
+    "assets/img/arcade.jpeg",
+
+  ],
+  cama: [
+    "assets/img/cama.jpeg",
+    "assets/img/cama1.jpeg"
+  ],
+  candybar: [
+    "assets/img/candybar.jpeg",
+    "assets/img/candybar1.jpeg"
+
+  ],
+  cas: [
+    "assets/img/castillo.jpeg",
+    "assets/img/castillo2.jpeg"
+  ],
+  
+  casmediano: [
+    "assets/img/casmediano.jpeg",
+    "assets/img/casmediano1.jpeg"
+  ],
+  caspremium: [
+    "assets/img/caspremium.jpeg",
+    "assets/img/caspremium1.jpeg"
+  ],
+  toboganacutico: [
+    "assets/img/toboganacuetico.jpeg",
+    "assets/img/toboganacuatico1.jpeg"
+  ],
+  toboganmediano: [
+    "assets/img/toboganmediano.jpeg"
+    
+  ],
+
+  taca: [
+    "assets/img/taca.jpeg"
+    
+  ],
+  
   // Agrega más carruseles aquí con su clave y array de imágenes
 };
 
