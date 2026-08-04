@@ -1,3 +1,12 @@
+/* Importación de la fuente (puedes ajustar la ruta según donde tengas guardado el archivo .otf o .ttf) */
+@font-face {
+  font-family: 'Cute Kitchen';
+  src: url('../fonts/CuteKitchen.otf') format('opentype'),
+       url('../fonts/CuteKitchen.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Reset básico */
 * {
   margin: 0;
@@ -10,7 +19,8 @@ html {
 }
 
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  /* Se agrega 'Cute Kitchen' como primera opción para el texto base */
+  font-family: 'Cute Kitchen', 'Comic Sans MS', cursive, sans-serif;
   background-color: #ffffff; /* Fondo Blanco */
   overflow-x: hidden;
   margin: 0;
@@ -28,8 +38,6 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
-  /* Sombra negra para efecto de profundidad */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -46,7 +54,9 @@ header .logo img {
 }
 
 header h1 {
-  font-size: 24px;
+  /* Aplicamos la fuente Cute Kitchen directamente al título del logo */
+  font-family: 'Cute Kitchen', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 28px;
   color: #cc0066;
 }
 
@@ -171,6 +181,7 @@ header h1 {
 }
 
 .titulo-seccion {
+  font-family: 'Cute Kitchen', 'Comic Sans MS', cursive, sans-serif;
   font-size: 36px;
   color: #cc0066;
   margin-bottom: 10px;
@@ -213,8 +224,9 @@ header h1 {
 }
 
 .tarjeta-servicio h3 {
+  font-family: 'Cute Kitchen', 'Comic Sans MS', cursive, sans-serif;
   color: #cc0066;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /* Estilos para Carruseles de Juegos */
@@ -255,7 +267,7 @@ header h1 {
   align-items: center;
   justify-content: center;
   transition: background 0.3s;
-  flex-shrink: 0; /* Evita que la flecha se aplaste */
+  flex-shrink: 0;
 }
 
 .flecha:hover {
@@ -277,7 +289,8 @@ header h1 {
 }
 
 .descripcion h2 {
-  font-size: 32px;
+  font-family: 'Cute Kitchen', 'Comic Sans MS', cursive, sans-serif;
+  font-size: 36px;
   color: #cc0066;
   margin-bottom: 15px;
 }
@@ -305,7 +318,6 @@ header h1 {
     gap: 10px;
   }
 
-  /* REGLA CLAVE: Resta el ancho de las 2 flechas (aprox 90px) a la imagen */
   #imagen-carrusel {
     max-width: calc(100% - 90px);
     height: auto;
